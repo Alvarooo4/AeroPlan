@@ -36,3 +36,9 @@ La información de estas zonas se actualiza periódicamente, por lo que permite 
 - [AEMET OpenData](https://opendata.aemet.es/centrodedescargas/productosAEMET)
 - [Zonas geográficas UAS - AESA](https://www.seguridadaerea.gob.es/es/node/1529)
 - [Servicio de datos AIS para zonas geográficas UAS - ENAIRE](https://aip.enaire.es/recursos/descargas/ZGUAS/servAIS_APIDOC.pdf)
+
+## Planificación
+- [Personas](docs/personas.md)
+- [Jornadas de usuario](docs/user-journeys.md)
+- [Historias de usuario](docs/historias-usuario.md)
+- [Milestones](docs/milestones.md)
