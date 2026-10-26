@@ -42,3 +42,10 @@ La información de estas zonas se actualiza periódicamente, por lo que permite 
 - [Jornadas de usuario](docs/user-journeys.md)
 - [Historias de usuario](docs/historias-usuario.md)
 - [Milestones](docs/milestones.md)
+
+## Lenguaje de Programación
+Para este proyecto hemos decidido usar Go (versión 1.27.2) porque encaja perfecto con lo que necesita AeroPlan. 
+
+Por un lado, nos viene genial para aplicar DDD: Go nos pone muy fácil usar structs para montar nuestros Objetos Valor (como las coordenadas o las restricciones) y asegurar que nadie pueda modificar sus datos una vez creados, que es justo lo que nos hace falta para tener un dominio robusto. 
+
+Por otro lado, por el tipo de problema. Como la aplicación tiene que estar cruzando todo el rato los datos del tiempo de la AEMET con los mapas de zonas de ENAIRE, las goroutines de Go nos vienen de lujo. Así podemos hacer esas peticiones en paralelo y procesar toda esa información rápido sin que el sistema se quede pillado esperando.
