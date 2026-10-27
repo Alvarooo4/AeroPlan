@@ -1,16 +1,14 @@
 package modelo
 
-import "errors"
-
 type Piloto struct {
-	id          string
+	id       string
 	licencia Licencia
 }
 
-func NuevoPiloto(id string, cert Licencia) (Piloto, error) {
+func NuevoPiloto(id string, lic Licencia) (Piloto, error) {
 	if id == "" {
-		return Piloto{}, errors.New("el ID del piloto no puede estar vacío")
+		return Piloto{}, ErrIDPilotoVacio
 	}
 
-	return Piloto{id: id, certificado: cert}, nil
+	return Piloto{id: id, licencia: lic}, nil
 }

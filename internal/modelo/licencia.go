@@ -1,15 +1,19 @@
 package modelo
 
-import "errors"
+type Licencia string
 
-type Licencia struct {
-	categoria string
-}
+const (
+	A1A3 Licencia = "A1/A3"
+	A2   Licencia = "A2"
+	STS  Licencia = "STS"
+)
 
 func NuevaLicencia(categoria string) (Licencia, error) {
-	if categoria != "A1/A3" && categoria != "A2" && categoria != "STS" {
-		return Licencia{}, errors.New("categoría de licencia no reconocida")
+	lic := Licencia(categoria)
+	
+	if lic != A1A3 && lic != A2 && lic != STS {
+		return "", ErrCategoriaNoReconocida
 	}
 	
-	return Licencia{categoria: categoria}, nil
+	return lic, nil
 }

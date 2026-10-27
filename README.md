@@ -44,7 +44,7 @@ La información de estas zonas se actualiza periódicamente, por lo que permite 
 - [Milestones](docs/milestones.md)
 
 ## Lenguaje de Programación
-Para este proyecto hemos decidido usar Go (versión 1.27.2) porque encaja perfecto con lo que necesita AeroPlan. 
+Para este proyecto hemos decidido usar Go porque encaja perfecto con lo que necesita AeroPlan. 
 
 Por un lado, nos viene genial para aplicar DDD: Go nos pone muy fácil usar structs para montar nuestros Objetos Valor (como las coordenadas o las restricciones) y asegurar que nadie pueda modificar sus datos una vez creados, que es justo lo que nos hace falta para tener un dominio robusto. 
 
