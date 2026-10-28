@@ -11,6 +11,6 @@ func NuevaLocalizacion(lat, lon float64) (Localizacion, error) {
 	if math.IsNaN(lat) || math.IsNaN(lon) || lat < -90 || lat > 90 || lon < -180 || lon > 180 {
 		return Localizacion{}, ErrCoordenadasInvalidas
 	}
-	
+
 	return Localizacion{latitud: lat, longitud: lon}, nil
 }

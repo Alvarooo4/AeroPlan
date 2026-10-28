@@ -1,21 +1,19 @@
 package modelo
 
+// Su id lo otorga los datos de ENAIRE a través de sus archivos descargables "ZONAS UAS".
 type ZonaUAS struct {
-	idEnaire            string
-	restricciones       []Restriccion
-	geometria           string // Extensión geográfica (polígono, círculo, etc.)
-	licenciasPermitidas []Licencia
+	id            string
+	geometria     Geometria
+	restricciones []Restriccion
 }
 
-func NuevaZonaUAS(idEnaire string, restricciones []Restriccion, geometria string, licencias []Licencia) (ZonaUAS, error) {
-	if idEnaire == "" {
+func NuevaZonaUAS(id string, geo Geometria, rest []Restriccion) (ZonaUAS, error) {
+	if id == "" {
 		return ZonaUAS{}, ErrIDEnaireVacio
 	}
-
 	return ZonaUAS{
-		idEnaire:            idEnaire,
-		restricciones:       restricciones,
-		geometria:           geometria,
-		licenciasPermitidas: licencias,
+		id:            id,
+		geometria:     geo,
+		restricciones: rest,
 	}, nil
 }
