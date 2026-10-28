@@ -1,6 +1,5 @@
 package modelo
 
-// Geometria es un Objeto Valor que representa un área delimitada por puntos según ENAIRE.
 type Geometria struct {
 	puntos []Localizacion
 }
