@@ -1,6 +1,5 @@
 package modelo
 
-// Su id lo otorga los datos de ENAIRE a través de sus archivos descargables "ZONAS UAS".
 type ZonaUAS struct {
 	id            string
 	geometria     Geometria
