@@ -6,7 +6,7 @@ type ZonaUAS struct {
 	restricciones []Restriccion
 }
 
-func NuevaZonaUAS(id string, geo Geometria, rest []Restriccion) (ZonaUAS, error) {
+func nuevaZonaUAS(id string, geo Geometria, rest []Restriccion) (ZonaUAS, error) {
 	if id == "" {
 		return ZonaUAS{}, ErrIDEnaireVacio
 	}
