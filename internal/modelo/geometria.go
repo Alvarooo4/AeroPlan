@@ -6,7 +6,7 @@ type Geometria struct {
 
 func NuevaGeometria(puntos []Localizacion) (Geometria, error) {
 	if len(puntos) < 3 {
-		return Geometria{}, ErrGeometriaInvalida
+		return Geometria{}, ErrorGeometriaInvalida{Puntos: len(puntos)}
 	}
 	return Geometria{puntos: puntos}, nil
 }

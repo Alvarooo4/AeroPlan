@@ -12,7 +12,7 @@ func NuevaLicencia(categoria string) (Licencia, error) {
 	lic := Licencia(categoria)
 
 	if lic != A1A3 && lic != A2 && lic != STS {
-		return "", ErrCategoriaNoReconocida
+		return "", ErrorCategoriaNoReconocida{Categoria: categoria}
 	}
 
 	return lic, nil

@@ -7,7 +7,7 @@ type Encargo struct {
 
 func NuevoEncargo(id string, loc Localizacion) (Encargo, error) {
 	if id == "" {
-		return Encargo{}, ErrIDEncargoVacio
+		return Encargo{}, ErrorIDEncargoVacio{}
 	}
 
 	return Encargo{id: id, localizacion: loc}, nil

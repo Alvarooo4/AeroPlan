@@ -8,10 +8,10 @@ type Restriccion struct {
 
 func NuevaRestriccion(altura float64, tipo string, licencias []Licencia) (Restriccion, error) {
 	if altura < 0 {
-		return Restriccion{}, ErrAlturaNegativa
+		return Restriccion{}, ErrorAlturaNegativa{Altura: altura}
 	}
 	if tipo == "" {
-		return Restriccion{}, ErrTipoRestriccionVacio
+		return Restriccion{}, ErrorTipoRestriccionVacio{}
 	}
 
 	return Restriccion{
