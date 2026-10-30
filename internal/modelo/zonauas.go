@@ -8,7 +8,7 @@ type ZonaUAS struct {
 
 func nuevaZonaUAS(id string, geo Geometria, rest []Restriccion) (ZonaUAS, error) {
 	if id == "" {
-		return ZonaUAS{}, ErrIDEnaireVacio
+		return ZonaUAS{}, ErrorIDEnaireVacio{}
 	}
 	return ZonaUAS{
 		id:            id,

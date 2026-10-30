@@ -7,7 +7,7 @@ type Piloto struct {
 
 func NuevoPiloto(id string, lic Licencia) (Piloto, error) {
 	if id == "" {
-		return Piloto{}, ErrIDPilotoVacio
+		return Piloto{}, ErrorIDPilotoVacio{}
 	}
 
 	return Piloto{id: id, licencia: lic}, nil

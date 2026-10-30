@@ -12,7 +12,7 @@ func NuevoCatalogoZonas() CatalogoZonas {
 
 func (c *CatalogoZonas) Registrar(id string, geometria Geometria, restricciones []Restriccion) error {
 	if _, existe := c.zonas[id]; existe {
-		return ErrZonaDuplicada
+		return ErrorZonaDuplicada{ID: id}
 	}
 
 	zona, err := nuevaZonaUAS(id, geometria, restricciones)
