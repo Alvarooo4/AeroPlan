@@ -6,6 +6,6 @@ type CatalogoZonas struct {
 
 func NewCatalogoZonas() CatalogoZonas {
 	return CatalogoZonas{
-		zonas: make(map[string]ZonaUAS),
+		zonas: make(map[string]ZonaUAS, 0),
 	}
 }
