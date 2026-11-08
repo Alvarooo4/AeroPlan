@@ -1,7 +1,8 @@
 package aeroplan
 
-type ZonaUAS struct {
-	id            string
-	geometria     Geometria
-	restricciones []Restriccion
-}
+type (
+	ZonaUAS struct {
+		restriccion Restriccion
+		geometria   Geometria
+	}
+)
