@@ -10,4 +10,5 @@ var (
 	ErrAlturaNegativa        = errors.New("la altura no puede ser negativa")
 	ErrIDEncargoVacio        = errors.New("el ID del encargo no puede estar vacío")
 	ErrTipoRestriccionVacio  = errors.New("el tipo de restricción no puede estar vacío")
+	ErrGeometriaInvalida     = errors.New("una geometría necesita al menos 3 puntos para formar un polígono")
 )

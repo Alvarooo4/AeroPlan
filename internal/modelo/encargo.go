@@ -9,6 +9,6 @@ func NuevoEncargo(id string, loc Localizacion) (Encargo, error) {
 	if id == "" {
 		return Encargo{}, ErrIDEncargoVacio
 	}
-	
+
 	return Encargo{id: id, localizacion: loc}, nil
 }

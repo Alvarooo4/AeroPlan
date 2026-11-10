@@ -13,6 +13,6 @@ func NuevaRestriccion(altura float64, tipo string) (Restriccion, error) {
 	if tipo == "" {
 		return Restriccion{}, ErrTipoRestriccionVacio
 	}
-	
+
 	return Restriccion{alturaMaxima: altura, tipo: tipo}, nil
 }
