@@ -1,6 +1,6 @@
 package aeroplan
 
 type Encargo struct {
-	id           string
+	id_encargo   string
 	localizacion Localizacion
 }
