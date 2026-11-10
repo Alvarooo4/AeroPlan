@@ -1,5 +1,5 @@
 package aeroplan
 
 type Geometria struct {
-	puntos []Localizacion
+	puntos_geometricos []Localizacion
 }
