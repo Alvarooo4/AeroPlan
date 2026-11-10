@@ -1,11 +1,7 @@
 package aeroplan
 
-type CatalogoZonas struct {
-	zonas map[string]ZonaUAS
-}
+type IdZona string 
 
-func NewCatalogoZonas() CatalogoZonas {
-	return CatalogoZonas{
-		zonas: make(map[string]ZonaUAS, 0),
-	}
+type CatalogoZonas struct {
+    zonas map[IdZona]ZonaUAS
 }
