@@ -1,7 +1,17 @@
 package aeroplan
 
+type TipoRestriccion string
+
+const (
+	RestriccionProhibida      TipoRestriccion = "PROHIBIDA"
+	RestriccionRequisitos     TipoRestriccion = "REQ_AUTHORIZATION"
+	RestriccionControlada     TipoRestriccion = "CTR"
+	RestriccionLibre          TipoRestriccion = "LIBRE"
+)
+
+const AlturaMaximaLegal float64 = 120.0
+
 type Restriccion struct {
-	alturaMaxima        float64
-	tipo                string
-	licenciasRequeridas []Licencia
+	alturaMaximaZona float64
+	tipo             TipoRestriccion
 }
