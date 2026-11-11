@@ -1,6 +1,8 @@
 package aeroplan
 
+import  "time"
+
 type Encargo struct {
-	id_encargo   string
-	localizacion Localizacion
+	Localizacion Localizacion
+	fecha        time.Time
 }
