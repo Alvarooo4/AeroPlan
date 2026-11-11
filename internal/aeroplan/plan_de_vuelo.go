@@ -1,7 +1,8 @@
 package aeroplan
 
+type IdZona string
+
 type PlanDeVuelo struct {
-	encargo    Encargo
-	zona       IdZona
-	autorizado bool
+	encargosPorUbicacion map[Localizacion]Encargo
+	zonasUAS map[IdZona]ZonaUAS
 }
