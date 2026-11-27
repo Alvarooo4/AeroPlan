@@ -1,6 +1,6 @@
 package aeroplan
 
-type ZonasUAS struct {
+type ZonaUAS struct {
 	restriccion Restriccion
 	geometria   []Localizacion
 }
